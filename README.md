@@ -7,6 +7,7 @@
 ```
 tfr://REGISTRY_DOMAIN/MODULE?version=VERSION
 ```
+- Terragruntが対応しているterraformのバージョン表.[Supported Terraform Versions](https://terragrunt.gruntwork.io/docs/getting-started/supported-terraform-versions/)
 - `.terragrunt-cache/`ディレクトリにキャッシュされる。(これはignoreしたほうが...?)
 - terraformと同じように`terragrunt [init | plan | apply]`を実行できる。
 - 公式に出てくるDRYは、“Don’t Repeat Yourself”という意味。
