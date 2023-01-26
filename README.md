@@ -11,6 +11,7 @@ tfr://REGISTRY_DOMAIN/MODULE?version=VERSION
 - `.terragrunt-cache/`ディレクトリにキャッシュされる。(これはignoreしたほうが...?)
 - terraformと同じように`terragrunt [init | plan | apply]`を実行できる。
 - 公式に出てくるDRYは、“Don’t Repeat Yourself”という意味。
+- `terragrunt hclfmt`.(terraform fmt -recursiveと同じ)`--terragrunt-check`オプションをつけれる。
 
 # サンプル
 ## Backend Configuration
