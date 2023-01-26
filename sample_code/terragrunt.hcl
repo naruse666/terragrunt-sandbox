@@ -7,7 +7,7 @@ remote_state {
   config = {
     bucket = "naruse-tf-backend"
 
-    key = "${path_relative_to_include()}/terraform.tfstate"
+    key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "ap-northeast-1"
     encrypt        = true
     dynamodb_table = "naruse-tf-backend"
@@ -15,9 +15,9 @@ remote_state {
 }
 
 generate "provider" {
-  path = "provider.tf"
+  path      = "provider.tf"
   if_exists = "overwrite_terragrunt"
-  contents = <<EOF
+  contents  = <<EOF
 provider "aws" {
   assume_role {
     role_arn = "arn:aws:iam::0123456789:role/terragrunt"
