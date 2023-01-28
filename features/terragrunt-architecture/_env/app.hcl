@@ -6,7 +6,7 @@ locals {
 }
 
 terraform {
-  source = "${ local.source_base_url }?ref=v0.1.0"
+  source = "${local.source_base_url}?ref=v0.1.0"
 }
 
 dependency "vpc" {
@@ -18,7 +18,7 @@ dependency "mysql" {
 }
 
 inputs = {
-  env = local.env_name
+  env            = local.env_name
   basename       = "example-app-${local.env_name}"
   vpc_id         = dependency.vpc.outputs.vpc_id
   subnet_ids     = dependency.vpc.outputs.subnet_ids

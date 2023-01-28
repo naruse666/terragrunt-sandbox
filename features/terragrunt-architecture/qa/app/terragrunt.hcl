@@ -3,11 +3,11 @@ include "root" {
 }
 
 include "env" {
-  path = "${get_terragrunt_dir()}/../../_env/app.hcl"
+  path   = "${get_terragrunt_dir()}/../../_env/app.hcl"
   expose = true
 }
 
 # Override the terraform.source attribute to v0.2.0
 terraform {
-  source = "${{include.env.locals.source_base_url}}?ref=v0.2.0"
+  source = "${include.env.locals.source_base_url}?ref=v0.2.0"
 }
