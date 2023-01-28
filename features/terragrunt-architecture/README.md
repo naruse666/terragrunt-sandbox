@@ -33,7 +33,6 @@ features/terragrunt-architecture/
 ```
 
 ## _envフォルダ
-公式には書いていないが、`dependency.<module>.outputs.<attr>`でモジュールのアウトプットを参照できる。
 ```_env/app.hcl
 terraform {
   source = "github.com/<org>/modules.git//app?ref=v0.1.0"
@@ -155,10 +154,10 @@ inputs {
 そして`qa/app/terragrunt.hcl`からinputsを削除する。
 
 # CI/CDへの考慮
-## `include`と`read_terragrunt_config`を使用していない場合
+## includeとread_terragrunt_configを使用していない場合
 更新された`terragrunt.hcl`ファイルを`--terragrunt-config`を使用して`terragrunt plan`, `terragrunt apply`を実行できる。
 
-## `include`と`read_terragrunt_config`を使用している場合
+## includeとread_terragrunt_configを使用している場合
 例えば`_env/app.hcl`を変更した場合、全てのモジュールを変更する必要がある。
 が、`read_terragrunt_config`は現在サポートされていない。`include`は[run-all](https://terragrunt.gruntwork.io/docs/reference/cli-options/#run-all)コマンドに、[--terragrunt-modules-that-include](https://terragrunt.gruntwork.io/docs/reference/cli-options/#terragrunt-modules-that-include)オプションを使用できる。  
 `terragrunt run-all plan --terragrunt-modules-that-include _env/app.hcl`のようなコマンドとなる。
