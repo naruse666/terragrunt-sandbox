@@ -8,7 +8,7 @@ inputs = {
 }
 
 locals {
-  x = 2
-  y = 40
+  x      = 2
+  y      = 40
   answer = local.x + local.y
 }

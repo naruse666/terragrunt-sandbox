@@ -13,3 +13,4 @@ tfr://REGISTRY_DOMAIN/MODULE?version=VERSION
 - 公式に出てくるDRYは、“Don’t Repeat Yourself”という意味。
 - `terragrunt hclfmt`.(terraform fmt -recursiveと同じ)`--terragrunt-check`オプションをつけれる。
 - `terragrunt graph-dependencies`コマンドで依存関係を表せる。(`terraform graph`の様な)
+- before/after hooksを使い、任意の`terragrunt`コマンド実行後にアクションを呼び出せる。

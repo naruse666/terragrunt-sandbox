@@ -5,12 +5,12 @@ remote_state {
     if_exists = "overwrite_terragrunt"
   }
   config = {
-    bucket = "naruse-tf-backend"
+    bucket = "tf-backend"
 
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "ap-northeast-1"
     encrypt        = true
-    dynamodb_table = "naruse-tf-backend"
+    dynamodb_table = "tf-backend"
   }
 }
 
